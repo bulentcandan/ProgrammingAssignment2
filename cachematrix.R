@@ -56,7 +56,7 @@ cacheSolve <- function(x, ...) {
   ## "inverse" is NULL ie matrix "x" is either newly created or updated
   matrix_x <- x$getx()               ## get cached matrix "x"
   inverse  <- solve(matrix_x, ...)   ## compute inverse of matrix "x" by solve()
-  ## passing the user set parameters to "solve" as well
+                                     ## passing the user set parameters to "solve" as well
   x$setinverse(inverse)              ## cache the "inverse" 
   inverse                            ## also return it
 }
